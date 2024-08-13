@@ -6,7 +6,7 @@
 
 Скачайте проект с GitHub
 ```bash
-git clone ...
+git clone https://github.com/rosoporto/example_mongodb.git
 ```
 
 Установите зависимости:
