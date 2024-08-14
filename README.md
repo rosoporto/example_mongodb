@@ -55,3 +55,34 @@ sudo systemctl restart nginx
 ```bash
 make server
 ```
+
+Для демонстрации проекта на REST API запустите проект командой:
+```bash
+make api_server
+```
+Протестировать работу REST IP вы можете с использованием Postman или curl:
+
+Добавление элемента:
+```bash
+curl -X POST http://127.0.0.1:5000/items -H "Content-Type: application/json" -d '{"name": "Test Item", "value": 42}'
+```
+
+Получение всех элементов:
+```bash
+curl -X GET http://127.0.0.1:5000/items
+```
+
+Получение конкретного элемента:
+```bash
+curl -X GET http://127.0.0.1:5000/items/Test Item
+```
+
+Обновление элемента:
+```bash
+curl -X PUT http://127.0.0.1:5000/items/Test Item -H "Content-Type: application/json" -d '{"value": 100}'
+```
+
+Удаление элемента:
+```bash
+curl -X DELETE http://127.0.0.1:5000/items/Test Item
+```
